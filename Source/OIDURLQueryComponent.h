@@ -22,13 +22,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/*! @var gOIDURLQueryComponentForceIOS7Handling
-    @brief If set to YES, will force the iOS 7-only code for @c OIDURLQueryComponent to be used,
-        even on non-iOS 7 devices and simulators. Useful for testing the iOS 7 code paths on the
-        simulator. Defaults to NO.
- */
-extern BOOL gOIDURLQueryComponentForceIOS7Handling;
-
 /*! @class OIDURLQueryComponent
     @brief A utility class for creating and parsing URL query components.
  */
