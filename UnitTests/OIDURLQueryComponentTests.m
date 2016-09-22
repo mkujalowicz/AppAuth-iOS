@@ -38,21 +38,21 @@ static NSString *const kTestParameterValue = @"ParameterValue";
 /*! @var kTestParameterValue2
     @brief A different testing parameter value.
  */
-static NSString *const kTestParameterValue2 = @"Parameter Va=l&ue2";
-static NSString *const kTestParameterValue2Encoded = @"Parameter%20Va%3Dl%26ue2";
+static NSString *const kTestParameterValue2 = @"Parameter Va=l&ue2+";
+static NSString *const kTestParameterValue2Encoded = @"Parameter%20Va%3Dl%26ue2%2B";
 
 /*! @var kTestSimpleParameterStringEncoded
     @brief The result of generating a parameter string from:
         @@{ kTestParameterName : kTestParameterValue, kTestParameterName2 : kTestParameterValue2 }
  */
 static NSString *const kTestSimpleParameterStringEncoded =
-    @"ParameterName=ParameterValue&ParameterName2=Parameter%20Va%3Dl%26ue2";
+    @"ParameterName=ParameterValue&ParameterName2=Parameter%20Va%3Dl%26ue2%2B";
 
 /*! @var kTestSimpleParameterStringEncodedRev
     @brief Same as @c kTestSimpleParameterStringEncoded but with the parameter order reversed.
  */
 static NSString *const kTestSimpleParameterStringEncodedRev =
-    @"ParameterName2=Parameter%20Va%3Dl%26ue2&ParameterName=ParameterValue";
+    @"ParameterName2=Parameter%20Va%3Dl%26ue2%2B&ParameterName=ParameterValue";
 
 /*! @var kTestURLRoot
     @brief A URL string to use for testing.
@@ -80,6 +80,26 @@ static NSString *const kTestURLRoot = @"https://www.example.com/";
   XCTAssertEqual(values.count, 2);
   XCTAssertEqualObjects(values.firstObject, kTestParameterValue);
   XCTAssertEqualObjects(values[1], kTestParameterValue2);
+}
+
+- (void)testEncodingParameters {
+  NSDictionary *testParameters =
+  @{ kTestParameterName : @[kTestParameterValue, kTestParameterValue],
+     kTestParameterName2 : @[kTestParameterValue2, kTestParameterValue2Encoded] };
+  
+  [testParameters enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
+    OIDURLQueryComponent *query = [[OIDURLQueryComponent alloc] init];
+    XCTAssertTrue([value isKindOfClass:[NSArray class]]);
+    NSArray *paramValues = value;
+    XCTAssertEqual(paramValues.count, 2);
+    XCTAssertTrue([paramValues[0] isKindOfClass:[NSString class]]);
+    XCTAssertTrue([paramValues[1] isKindOfClass:[NSString class]]);
+    XCTAssertTrue([key isKindOfClass:[NSString class]]);
+    [query addParameter:key value:paramValues[0]];
+        
+    NSString *encodedPair = [NSString stringWithFormat:@"%@=%@", key, paramValues[1]];
+    XCTAssertEqualObjects(query.URLEncodedParameters, encodedPair);
+  }];
 }
 
 - (void)testAddingThreeParameters {
