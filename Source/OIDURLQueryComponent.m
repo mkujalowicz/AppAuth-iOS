@@ -18,6 +18,14 @@
 
 #import "OIDURLQueryComponent.h"
 
+/*! @var kQueryStringParamAllowedCharacters
+ @brief String representing the set of characters that are unreserved in URL query
+ parameters and values.
+ */
+static NSString *const kQueryStringParamAllowedCharacters =
+  @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890.-*_";
+
+
 @implementation OIDURLQueryComponent {
   /*! @var _parameters
       @brief A dictionary of parameter names and values representing the contents of the query.
@@ -118,8 +126,7 @@
 
   NSCharacterSet *allowedParamCharacters =
     [NSCharacterSet
-     characterSetWithCharactersInString:
-     @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890.-*_"];
+     characterSetWithCharactersInString: kQueryStringParamAllowedCharacters];
 
   for (NSString *parameterName in _parameters.allKeys) {
     NSString *encodedParameterName =
