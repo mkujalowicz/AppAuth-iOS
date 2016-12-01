@@ -21,8 +21,35 @@ class AppAuthSwiftTests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let serviceConfiguration = OIDServiceConfiguration(
+            authorizationEndpoint:
+            URL(string: "http://")!,
+            tokenEndpoint:
+            URL(string: "https://api.twitter.com/oauth2/token")!)
+        let tokenRequest = OIDTokenRequest(
+            configuration: serviceConfiguration,
+            grantType: "client_credentials",
+            authorizationCode: nil,
+            redirectURL: URL(string: "redirectURI:/")!,
+            clientID: "",
+            clientSecret: "",
+            scope: "",
+            refreshToken: nil,
+            codeVerifier: nil,
+            additionalParameters: nil)
+        // needs to unwrap tokenRequest
+        guard let tokenRequestUnwrapped = tokenRequest else {
+            return
+        }
+        let asyncExpectation = expectation(description: "waiting for token response")
+        OIDAuthorizationService.perform(tokenRequestUnwrapped) { (response, error) in
+            print("error: \(error)")
+            XCTAssertNotNil(response)
+            asyncExpectation.fulfill()
+        }
+        waitForExpectations(timeout: 10) { error in
+            XCTAssertNil(error)
+        }
     }
     
 }
