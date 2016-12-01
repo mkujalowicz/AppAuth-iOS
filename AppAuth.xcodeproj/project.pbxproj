@@ -104,6 +104,7 @@
 		044D87B11DEFCEB800E147DA /* AppAuthSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppAuthSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		044D87B31DEFCEB800E147DA /* AppAuthSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAuthSwiftTests.swift; sourceTree = "<group>"; };
 		044D87B51DEFCEB800E147DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		044D87BC1DEFD02500E147DA /* AppAuthSwiftTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppAuthSwiftTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		340DAE251D581FE700EC285B /* OIDAuthorizationService+Mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OIDAuthorizationService+Mac.h"; sourceTree = "<group>"; };
 		340DAE261D581FE700EC285B /* OIDAuthorizationService+Mac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OIDAuthorizationService+Mac.m"; sourceTree = "<group>"; };
 		340DAE271D581FE700EC285B /* OIDAuthorizationUICoordinatorMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OIDAuthorizationUICoordinatorMac.h; sourceTree = "<group>"; };
@@ -228,6 +229,7 @@
 			children = (
 				044D87B31DEFCEB800E147DA /* AppAuthSwiftTests.swift */,
 				044D87B51DEFCEB800E147DA /* Info.plist */,
+				044D87BC1DEFD02500E147DA /* AppAuthSwiftTests-Bridging-Header.h */,
 			);
 			path = AppAuthSwiftTests;
 			sourceTree = "<group>";
@@ -474,6 +476,7 @@
 				TargetAttributes = {
 					044D87B01DEFCEB800E147DA = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					340DAE4D1D58216A00EC285B = {
@@ -638,6 +641,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.openid.appauth.AppAuthSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "AppAuthSwiftTests/AppAuthSwiftTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -655,6 +659,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.openid.appauth.AppAuthSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AppAuthSwiftTests/AppAuthSwiftTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
