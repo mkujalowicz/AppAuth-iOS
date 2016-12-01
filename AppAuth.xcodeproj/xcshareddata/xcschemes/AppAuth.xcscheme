@@ -20,6 +20,20 @@
                ReferencedContainer = "container:AppAuth.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "044D87B01DEFCEB800E147DA"
+               BuildableName = "AppAuthSwiftTests.xctest"
+               BlueprintName = "AppAuthSwiftTests"
+               ReferencedContainer = "container:AppAuth.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -35,6 +49,16 @@
                BlueprintIdentifier = "341741EF1C5D8283000EF209"
                BuildableName = "AppAuthTests.xctest"
                BlueprintName = "AppAuthTests"
+               ReferencedContainer = "container:AppAuth.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "044D87B01DEFCEB800E147DA"
+               BuildableName = "AppAuthSwiftTests.xctest"
+               BlueprintName = "AppAuthSwiftTests"
                ReferencedContainer = "container:AppAuth.xcodeproj">
             </BuildableReference>
          </TestableReference>
