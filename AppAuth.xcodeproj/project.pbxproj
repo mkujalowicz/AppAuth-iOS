@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044D87B41DEFCEB800E147DA /* AppAuthSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D87B31DEFCEB800E147DA /* AppAuthSwiftTests.swift */; };
+		044D87B61DEFCEB800E147DA /* libAppAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 340E737C1C5D819B0076B1F6 /* libAppAuth.a */; };
 		340DAE571D5821A100EC285B /* OIDAuthorizationService+Mac.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DAE261D581FE700EC285B /* OIDAuthorizationService+Mac.m */; };
 		340DAE581D5821A100EC285B /* OIDAuthorizationUICoordinatorMac.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DAE281D581FE700EC285B /* OIDAuthorizationUICoordinatorMac.m */; };
 		340DAE591D5821A100EC285B /* OIDAuthState+Mac.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DAE2A1D581FE700EC285B /* OIDAuthState+Mac.m */; };
@@ -70,6 +72,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		044D87B71DEFCEB800E147DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 340E73741C5D819B0076B1F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 340E737B1C5D819B0076B1F6;
+			remoteInfo = AppAuth;
+		};
 		341741F61C5D8283000EF209 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 340E73741C5D819B0076B1F6 /* Project object */;
@@ -92,6 +101,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		044D87B11DEFCEB800E147DA /* AppAuthSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppAuthSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		044D87B31DEFCEB800E147DA /* AppAuthSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAuthSwiftTests.swift; sourceTree = "<group>"; };
+		044D87B51DEFCEB800E147DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		340DAE251D581FE700EC285B /* OIDAuthorizationService+Mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OIDAuthorizationService+Mac.h"; sourceTree = "<group>"; };
 		340DAE261D581FE700EC285B /* OIDAuthorizationService+Mac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OIDAuthorizationService+Mac.m"; sourceTree = "<group>"; };
 		340DAE271D581FE700EC285B /* OIDAuthorizationUICoordinatorMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OIDAuthorizationUICoordinatorMac.h; sourceTree = "<group>"; };
@@ -176,6 +188,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		044D87AE1DEFCEB800E147DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044D87B61DEFCEB800E147DA /* libAppAuth.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		340DAE4B1D58216A00EC285B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,6 +223,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044D87B21DEFCEB800E147DA /* AppAuthSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				044D87B31DEFCEB800E147DA /* AppAuthSwiftTests.swift */,
+				044D87B51DEFCEB800E147DA /* Info.plist */,
+			);
+			path = AppAuthSwiftTests;
+			sourceTree = "<group>";
+		};
 		340DAE241D581FE700EC285B /* macOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +251,7 @@
 		340E73731C5D819B0076B1F6 = {
 			isa = PBXGroup;
 			children = (
+				044D87B21DEFCEB800E147DA /* AppAuthSwiftTests */,
 				341742291C5D84D0000EF209 /* Frameworks */,
 				341741FB1C5D82D3000EF209 /* UnitTests */,
 				341741AE1C5D8243000EF209 /* Source */,
@@ -235,6 +265,7 @@
 				340E737C1C5D819B0076B1F6 /* libAppAuth.a */,
 				341741F01C5D8283000EF209 /* AppAuthTests.xctest */,
 				340DAE4E1D58216A00EC285B /* libAppAuth-macOS.a */,
+				044D87B11DEFCEB800E147DA /* AppAuthSwiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -361,6 +392,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		044D87B01DEFCEB800E147DA /* AppAuthSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 044D87BB1DEFCEB800E147DA /* Build configuration list for PBXNativeTarget "AppAuthSwiftTests" */;
+			buildPhases = (
+				044D87AD1DEFCEB800E147DA /* Sources */,
+				044D87AE1DEFCEB800E147DA /* Frameworks */,
+				044D87AF1DEFCEB800E147DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				044D87B81DEFCEB800E147DA /* PBXTargetDependency */,
+			);
+			name = AppAuthSwiftTests;
+			productName = AppAuthSwiftTests;
+			productReference = 044D87B11DEFCEB800E147DA /* AppAuthSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		340DAE4D1D58216A00EC285B /* AppAuth-macOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 340DAE541D58216A00EC285B /* Build configuration list for PBXNativeTarget "AppAuth-macOS" */;
@@ -419,9 +468,14 @@
 		340E73741C5D819B0076B1F6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Google Inc";
 				TargetAttributes = {
+					044D87B01DEFCEB800E147DA = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
 					340DAE4D1D58216A00EC285B = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -448,11 +502,19 @@
 				340E737B1C5D819B0076B1F6 /* AppAuth */,
 				341741EF1C5D8283000EF209 /* AppAuthTests */,
 				340DAE4D1D58216A00EC285B /* AppAuth-macOS */,
+				044D87B01DEFCEB800E147DA /* AppAuthSwiftTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		044D87AF1DEFCEB800E147DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		341741EE1C5D8283000EF209 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,6 +526,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		044D87AD1DEFCEB800E147DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044D87B41DEFCEB800E147DA /* AppAuthSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		340DAE4A1D58216A00EC285B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -542,6 +612,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		044D87B81DEFCEB800E147DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 340E737B1C5D819B0076B1F6 /* AppAuth */;
+			targetProxy = 044D87B71DEFCEB800E147DA /* PBXContainerItemProxy */;
+		};
 		341741F71C5D8283000EF209 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 340E737B1C5D819B0076B1F6 /* AppAuth */;
@@ -550,6 +625,41 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		044D87B91DEFCEB800E147DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				INFOPLIST_FILE = AppAuthSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.openid.appauth.AppAuthSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		044D87BA1DEFCEB800E147DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				INFOPLIST_FILE = AppAuthSwiftTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.openid.appauth.AppAuthSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		340DAE551D58216A00EC285B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -697,6 +807,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		044D87BB1DEFCEB800E147DA /* Build configuration list for PBXNativeTarget "AppAuthSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044D87B91DEFCEB800E147DA /* Debug */,
+				044D87BA1DEFCEB800E147DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		340DAE541D58216A00EC285B /* Build configuration list for PBXNativeTarget "AppAuth-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
